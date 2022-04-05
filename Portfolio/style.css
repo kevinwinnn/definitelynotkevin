@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One)
+*{
+  marin: 0;
+  padding: 0;
+}
+
+/* navigation bar */
+.navbar{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  position: relative;
+  font-family: 'Waiting for the Sunrise';
+}
+.navbar::before{
+  content: "";
+  position: absolute;
+  background-color:rgba(0, 0, 0, 0);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.navbar u1{
+  display: flex;
+  list-style: none;
+}
+.navbar u1 li{
+  font-size: 2em;
+}
+.navbar u1 li a{
+  padding: 5px 20px;
+  text-decoration: none;
+  color: red;
+}
+.navbar u1 li a:hover{
+  border-bottom: 2px solid orange;
+}
+.navbar u1 li a.active{
+  border-bottom: 2px solid #56a0d3;
+}
+/* TYPEWRITER */
+.wrappercenter {
+  height: 100vh;
+  /*entering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  height: 10vh;
+  /*entering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.type {
+  width: 25ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 5em;
+  font-family: 'Waiting for the Sunrise';
+  top: 0;
+  position: fixed;
+  margin-top: 10%;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+/* Home */
+#home{
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0 , 0.0);
+  color: black;
+}
+#home::before{
+  content: "";
+  position: absolute;;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 1;
+  /*background: linear-gradient(to bottom, #405166 0%,#656f6f 100%);*/
+  /* background: linear-gradient(to bottom, #ABABAB 10%,#3E606F 50%); */
+  /*background: linear-gradient(to bottom, #3E606F 0%,#656f6f 100%);*/
+}
+.heading{
+  color: white;
+  font-size: 4rem;
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+  transform: scale(1,1.3);
+}
+
+.padding {
+  padding: 3rem 0;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+  #languages .specials {
+    margin-top: 5rem;
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(6, 1fr);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    font-family: 'Waiting for the Sunrise';
+  }
+  #languages .fab,
+  #langauges .fas {
+    position: relative;
+    padding: 20px;
+    font-size: 2rem;
+    color: red;
+    transition: all 0.5s;
+    /* position: fixed; */
+    text-align: center;
+  }
+
+  #languages .fab:hover,
+  #languages .fas:hover {
+    color: orange;
+    font-size: 7rem;
+  }
